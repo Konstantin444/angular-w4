@@ -1,0 +1,80 @@
+.intersection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #d3d3d3, #999);
+  }
+  
+  .horizontal, .vertical {
+    position: absolute;
+    display: flex;
+  }
+  
+  .horizontal {
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .vertical {
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .horizontal.top {
+    top: 0;
+  }
+  
+  .horizontal.bottom {
+    bottom: 0;
+  }
+  
+  .vertical.left {
+    left: 0;
+  }
+  
+  .vertical.right {
+    right: 0;
+  }
+  
+  .emergency-button {
+    position: absolute;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .emergency-button:disabled {
+    background: darkred;
+    cursor: not-allowed;
+  }
+  
+  .emergency-button:hover:not(:disabled) {
+    transform: scale(1.4);
+    background: #ff4c4c;
+  }
+  
+  @media (max-width: 768px) {
+    .emergency-button {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .emergency-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  

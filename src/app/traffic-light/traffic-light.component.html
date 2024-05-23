@@ -1,1 +1,7 @@
-<p>traffic-light works!</p>
+<div class="traffic-light" [ngClass]="{'vertical': isVertical, 'horizontal': !isVertical}">
+    <div [class.red]="currentColor === 'red'"></div>
+    <div [class.yellow]="currentColor === 'yellow'"></div>
+    <div [class.green]="currentColor === 'green'"></div>
+    <button [disabled]="currentColor === 'red'" (click)="onButtonClick()">Intersection</button>
+  </div>
+  
